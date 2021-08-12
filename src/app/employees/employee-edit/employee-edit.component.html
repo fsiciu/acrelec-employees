@@ -1,0 +1,28 @@
+<div class="px-2">
+  <h3>Employees Edit</h3>
+
+  <div class="card">
+    <div class="d-flex flex-column w-100">
+      <h4>{{employee?.firstName}} {{employee?.secondName}}</h4>
+      <p [innerHTML]="employee?.details"></p>
+
+      <div class="input-container">
+        <input [(ngModel)]="employee.position">
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <button class="btn mr-1"
+                [ngClass]="employee.position.length === 0 ? 'btn-disabled': 'btn-primary'"
+                [disabled]="employee.position.length === 0"
+                (click)="onSave()">
+          Save
+        </button>
+
+        <button class="btn btn-secondary"
+                (click)="navigateToEmployeesList()">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

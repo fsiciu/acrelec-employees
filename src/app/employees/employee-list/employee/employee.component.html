@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="flex-grow-1">
+    <div class="info">
+      <img class="img-container" [src]="'assets/images/user.png'" alt="user-placeholder"/>
+
+      <div>
+        <h3>{{employee?.firstName}} {{employee?.secondName}}</h3>
+        <p>{{employee?.position}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-actions">
+    <button class="btn btn-primary mr-1"
+            (click)="onDeleteClick(employee)">
+      <img [src]="'assets/images/delete-user.png'" alt="user-delete">
+    </button>
+
+    <button class="btn"
+            [ngClass]="employee?.blocked ? 'btn-disabled': 'btn-secondary'"
+            [disabled]="employee?.blocked"
+            (click)="onEditClick(employee?.id)">
+      <img [src]="'assets/images/edit-user.png'" alt="user-edit"/>
+    </button>
+  </div>
+</div>

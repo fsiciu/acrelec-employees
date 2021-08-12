@@ -1,0 +1,28 @@
+.card {
+  .info {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .img-container {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .btn-actions {
+    display: flex;
+    align-items: center;
+
+    .btn {
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="px-2">
+  <h3>Employees list</h3>
+
+  <div class="input-container">
+    <input placeholder="Search" [(ngModel)]="searchQuery">
+  </div>
+
+  <ng-container *ngFor="let employee of employees | filter: searchQuery">
+    <app-employee [employee]="employee"
+                  (deleteEmployeeEvent)="onDeleteEmployee($event)"
+                  (editEmployeeEvent)="onEditEmployee($event)">
+    </app-employee>
+  </ng-container>
+
+  <app-confirm-dialog></app-confirm-dialog>
+</div>

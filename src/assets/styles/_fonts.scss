@@ -1,0 +1,13 @@
+$font-path: '/assets/fonts';
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('#{$font-path}/Roboto-Regular.woff') format('woff'),
+  url('#{$font-path}/Roboto-Regular.ttf') format('ttf'),
+  url('#{$font-path}/Roboto-Regular.svg') format('svg'),
+  url('#{$font-path}/Roboto-Regular.otf') format('otf'),
+  url('#{$font-path}/Roboto-Regular.eot') format('eot');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
